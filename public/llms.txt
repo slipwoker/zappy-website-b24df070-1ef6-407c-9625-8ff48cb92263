@@ -1,0 +1,57 @@
+# House 360 — Generative Engine Optimization Map
+
+> A שירותי בית ותחזוקה business.
+
+---
+
+## Pages
+
+### בית
+https://house-360-b24df070.zappy5.app
+
+### שירותים
+https://house-360-b24df070.zappy5.app/services
+
+### אודות
+https://house-360-b24df070.zappy5.app/about
+
+### צור קשר
+https://house-360-b24df070.zappy5.app/contact
+
+## Legal & Policy
+
+### Privacy Policy
+https://house-360-b24df070.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://house-360-b24df070.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://house-360-b24df070.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+# Business Context (for LLM understanding)
+
+## About House 360
+House 360 is a business in the שירותי בית ותחזוקה industry.
+
+## Target Audience
+- בעלי בתים ומשפחות
+- בעלי בתים חדשים
+- אזרחים ותיקים
+- מנהלי נכסי השכרה
+- מקצוענים עסוקים
+
+## Industry
+שירותי בית ותחזוקה
+
+---
+
+# Additional Resources
+
+- **Sitemap**: https://house-360-b24df070.zappy5.app/sitemap.xml
+- **Robots.txt**: https://house-360-b24df070.zappy5.app/robots.txt
