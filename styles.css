@@ -5181,6 +5181,203 @@ body.accessibility-widget-visible ._access-menu {
   }
 }
 
+/* Added Component Styles */
+/* Gallery Section Styles */
+.gallery-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: #ffffff;
+  font-family: Heebo, Assistant, system-ui, sans-serif;
+}
+
+.gallery-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  grid-auto-flow: dense;
+}
+
+/* Gallery Item Variations */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item-large {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.gallery-item-wide {
+  grid-column: span 2;
+}
+
+.gallery-item-tall {
+  grid-row: span 2;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+/* Aspect Ratio Maintenance */
+.gallery-item::before {
+  content: '';
+  display: block;
+  padding-top: 100%; /* 1:1 aspect ratio by default */
+}
+
+.gallery-item-large::before {
+  padding-top: 100%;
+}
+
+.gallery-item-wide::before {
+  padding-top: 50%;
+}
+
+.gallery-item-tall::before {
+  padding-top: 150%;
+}
+
+.gallery-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .gallery-section {
+    padding: 60px 20px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+  
+  .gallery-item-large {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .gallery-item-tall {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 40px 15px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .gallery-item-large,
+  .gallery-item-wide {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  .gallery-item-tall {
+    grid-row: span 1;
+  }
+  
+  .gallery-item::before {
+    padding-top: 100%;
+  }
+  
+  .gallery-item-large::before,
+  .gallery-item-wide::before,
+  .gallery-item-tall::before {
+    padding-top: 75%;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-section {
+    padding: 30px 10px;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .gallery-item-large,
+  .gallery-item-wide,
+  .gallery-item-tall {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+  
+  .gallery-item::before,
+  .gallery-item-large::before,
+  .gallery-item-wide::before,
+  .gallery-item-tall::before {
+    padding-top: 75%;
+  }
+}
+
+/* Accessibility */
+.gallery-item:focus {
+  outline: 3px solid var(--primary, #0F1115);
+  outline-offset: 2px;
+}
+
+.gallery-item:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.gallery-item:focus-visible {
+  outline: 3px solid var(--primary, #0F1115);
+  outline-offset: 2px;
+}
+
+/* Loading State */
+.gallery-image[data-placeholder] {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+}
+
+/* Print Styles */
+@media print {
+  .gallery-section {
+    padding: 20px 0;
+  }
+  
+  .gallery-item:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
 /* ========== RTL MOBILE NAVBAR FIX (zappy-rtl-mobile-fix) ========== */
 /* High-specificity rules to ensure RTL positioning wins over any [lang="en"] conflicts */
 /* For RTL sites: hamburger on RIGHT, phone on LEFT (mirror of LTR layout) */
