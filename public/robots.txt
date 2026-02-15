@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://house-360-b24df070.zappy5.app/sitemap.xml
+Sitemap: https://example.com/sitemap.xml
